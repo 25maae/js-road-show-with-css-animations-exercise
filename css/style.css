@@ -150,7 +150,7 @@
     transform: translateX(0) rotateY(180deg);
   }
   100% {
-    transform: translateX(calc(-100vw + var(--off-car2))) rotateY(180deg);
+    transform: translateX(calc(-100vw - var(--off-car2))) rotateY(180deg);
   }
 }
 
