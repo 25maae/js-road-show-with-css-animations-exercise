@@ -115,7 +115,7 @@
   z-index: 1;
   left: calc(-1 * var(--off-car3));
   will-change: transform;
-  animation: car3 8s linear infinite;
+  animation: car3 8s linear infinite; /*ændret varighed*/
 }
 
 @keyframes car3 {
