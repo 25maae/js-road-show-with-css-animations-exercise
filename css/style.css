@@ -114,7 +114,7 @@
    - px for selve billedstørrelsen
    - vw/vh til placering og ALLE animationsafstande
 --------------------------------------------------------- */
-
+/* car1 */
 .car1 {
   position: absolute;
   bottom: 2.8vh;
@@ -129,9 +129,28 @@
   0% {
     transform: translateX(0);
   }
-  90%,
   100% {
     transform: translateX(calc(100vw + var(--off-car1)));
+  }
+}
+
+/* car2 venstre → højre */
+.car2 {
+  position: absolute;
+  bottom: 2.8vh;
+  width: var(--car-w);
+  max-width: 28vw;
+  right: calc(-1 * var(--off-car2));
+  z-index: 1;
+  animation: car2 12s linear infinite; /*ændret varighed*/
+}
+
+@keyframes car2 {
+  0% {
+    transform: translateX(0) rotateY(180deg);
+  }
+  100% {
+    transform: translateX(calc(-100vw + var(--off-car2))) rotateY(180deg);
   }
 }
 
