@@ -18,7 +18,7 @@ soundBlueCar.src = "../sound/blue-car-sound.wav";
 
 // Funktion til at afspille lyd ved klik på bil
 if (getRedCar) {
-    getRedCar.style.cursor = "pointer"; // Ændrer cursor til pointer ved hover
+  getRedCar.style.cursor = "pointer"; // Ændrer cursor til pointer ved hover
   getRedCar.addEventListener("click", () => {
     soundRedCar.play();
   });
@@ -42,6 +42,5 @@ if (getBlueCar) {
 if (sun && scene) {
   sun.addEventListener("click", () => {
     scene.classList.toggle("night");
-    sun.classList.toggle("sun-moved");
   });
 }
