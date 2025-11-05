@@ -18,18 +18,21 @@ soundBlueCar.src = "../sound/blue-car-sound.wav";
 
 // Funktion til at afspille lyd ved klik på bil
 if (getRedCar) {
+    getRedCar.style.cursor = "pointer"; // Ændrer cursor til pointer ved hover
   getRedCar.addEventListener("click", () => {
     soundRedCar.play();
   });
 }
 
 if (getPoliceCar) {
+  getPoliceCar.style.cursor = "pointer"; // Ændrer cursor til pointer ved hover
   getPoliceCar.addEventListener("click", () => {
     soundPoliceCar.play();
   });
 }
 
 if (getBlueCar) {
+  getBlueCar.style.cursor = "pointer"; // Ændrer cursor til pointer ved hover
   getBlueCar.addEventListener("click", () => {
     soundBlueCar.play();
   });
