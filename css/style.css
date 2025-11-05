@@ -24,6 +24,8 @@
   --off-car1: 200px;
   --off-car2: 200px;
   --off-car3: 200px;
+  --off-car4: 200px;
+  --off-car5: 200px;
 }
 
 /*global reset*/
@@ -118,11 +120,11 @@
 /* car1 venstre → højre (spejlvendt) */
 .car1 {
   position: absolute;
-  bottom: 2.8vh;
+  bottom: 1vh;
   width: var(--car-w);
   max-width: 28vw;
-  z-index: 1;
   left: calc(-1 * var(--off-car1));
+  z-index: 5;
   animation: car1 18s linear infinite; /*ændret varighed*/
 }
 
@@ -142,8 +144,8 @@
   width: var(--car-w);
   max-width: 28vw;
   right: calc(-1 * var(--off-car2));
-  z-index: 1;
-  animation: car2 12s linear infinite; /*ændret varighed*/
+  z-index: 3;
+  animation: car2 12s linear infinite;
 }
 
 @keyframes car2 {
@@ -161,10 +163,10 @@
   bottom: -3.4vh;
   width: var(--car-w);
   max-width: 28vw;
-  z-index: 1;
+  z-index: 5;
   left: calc(-1 * var(--off-car3));
   will-change: transform;
-  animation: car3 8s linear infinite; /*ændret varighed*/
+  animation: car3 8s linear infinite;
 }
 
 @keyframes car3 {
@@ -173,5 +175,45 @@
   }
   100% {
     transform: translateX(calc(100vw + var(--off-car3))) rotateY(180deg);
+  }
+}
+
+/* car4 venstre → højre */
+.car4 {
+  position: absolute;
+  bottom: 2.8vh;
+  width: var(--car-w);
+  max-width: 28vw;
+  left: calc(-1 * var(--off-car4));
+  z-index: 2;
+  animation: car4 10s linear infinite;
+}
+
+@keyframes car4 {
+  0% {
+    transform: translateX(0) rotateY(180deg);
+  }
+  100% {
+    transform: translateX(calc(100vw + var(--off-car4))) rotateY(180deg);
+  }
+}
+
+/* car5 højre → venstre */
+.car5 {
+  position: absolute;
+  bottom: 1.5vh;
+  width: var(--car-w);
+  max-width: 28vw;
+  right: calc(-1 * var(--off-car5));
+  z-index: 1;
+  animation: car5 14s linear infinite;
+}
+
+@keyframes car5 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100vw - var(--off-car5)));
   }
 }
