@@ -37,3 +37,11 @@ if (getBlueCar) {
     soundBlueCar.play();
   });
 }
+
+// Funktion til at ændre fra dag til nat ved klik på solen
+if (sun && scene) {
+  sun.addEventListener("click", () => {
+    scene.classList.toggle("night");
+    sun.classList.toggle("sun-moved");
+  });
+}
