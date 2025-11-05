@@ -114,7 +114,8 @@
    - px for selve billedstørrelsen
    - vw/vh til placering og ALLE animationsafstande
 --------------------------------------------------------- */
-/* car1 */
+
+/* car1 venstre → højre (spejlvendt) */
 .car1 {
   position: absolute;
   bottom: 2.8vh;
@@ -134,7 +135,7 @@
   }
 }
 
-/* car2 venstre → højre */
+/* car2 højre → venstre */
 .car2 {
   position: absolute;
   bottom: 2.8vh;
