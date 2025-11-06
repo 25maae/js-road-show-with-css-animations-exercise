@@ -43,6 +43,20 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  carInfo.forEach((car) => {
+    document.querySelectorAll("." + car.className).forEach((elem) => {
+      elem.addEventListener("mouseover", () => {
+        const carDetails = `<strong>${car.carBrand}</strong><br>
+        Model: ${car.carModel}<br>
+        Release Year: ${car.releaseYear}<br>
+        Color: ${car.color}<br>
+        Fuel Type: ${car.fuelType}
+        `;
+        showTooltip(carDetails);
+      });
+    });
+  });
+
   // Hent DOM elementer
   const getRedCar = document.getElementById("redCar");
   const getPoliceCar = document.getElementById("policeCar");
