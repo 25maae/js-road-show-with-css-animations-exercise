@@ -1,5 +1,32 @@
 "use strict";
 
+const carInfo = [
+  {
+    className: "car1",
+    carBrand: "Ford",
+    carModel: "Mustang",
+    releaseYear: 1984,
+    color: "Red",
+    fuelType: "Diesel",
+  },
+  {
+    className: "car2",
+    carBrand: "Chevrolet",
+    carModel: "Camaro",
+    releaseYear: 1967,
+    color: "Black & White",
+    fuelType: "Petrol",
+  },
+  {
+    className: "car3",
+    carBrand: "Dodge",
+    carModel: "Charger",
+    releaseYear: 1970,
+    color: "Blue",
+    fuelType: "Petrol",
+  },
+];
+
 // Hent DOM elementer
 const getRedCar = document.getElementById("redCar");
 const getPoliceCar = document.getElementById("policeCar");
