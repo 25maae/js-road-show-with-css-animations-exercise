@@ -43,15 +43,15 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  // Tilføjer event listeners til hver bil baseret på data-strukturen
   carInfo.forEach((car) => {
-    document.querySelectorAll("." + car.className).forEach((elem) => {
+    document.querySelectorAll("." + car.className).forEach((elem) => { // Vælger alle elementer med den givne className
       elem.addEventListener("mouseover", () => {
         const carDetails = `<strong>${car.carBrand}</strong><br>
         Model: ${car.carModel}<br>
         Release Year: ${car.releaseYear}<br>
         Color: ${car.color}<br>
-        Fuel Type: ${car.fuelType}
-        `;
+        Fuel Type: ${car.fuelType}`; // Opretter HTML teksten med biloplysninger
         showTooltip(carDetails);
       });
     });
