@@ -28,8 +28,21 @@ const carInfo = [
   },
 ];
 
-// Venter på at DOM er loaded
+// Venter med at køre JS koden indtil hele HTML-siden er indlæst
 document.addEventListener("DOMContentLoaded", () => {
+  const tooltip = document.getElementById("tooltip"); // Finder tooltip id og gemmer det i en variabel
+  // Funktion der viser tooltip med biloplysninger'
+  // Parameter: html - den tekst indeholdende html-tags som vi vil vise i tooltip'en
+  function showTooltip(html) {
+    if (tooltip) {
+      tooltip.innerHTML = html; // Indsætter teksten i tooltip'en
+      tooltip.classList.add("is-visible"); // Gør tooltip'en synlig med css klassen
+      setTimeout(function () {
+        tooltip.classList.remove("is-visible"); // Fjerner synligheds-klassen efter 3 sekunder
+      }, 3000);
+    }
+  }
+
   // Hent DOM elementer
   const getRedCar = document.getElementById("redCar");
   const getPoliceCar = document.getElementById("policeCar");
@@ -55,14 +68,14 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   if (getPoliceCar) {
-    getPoliceCar.style.cursor = "pointer"; // Ændrer cursor til pointer ved hover
+    getPoliceCar.style.cursor = "pointer";
     getPoliceCar.addEventListener("click", () => {
       soundPoliceCar.play();
     });
   }
 
   if (getBlueCar) {
-    getBlueCar.style.cursor = "pointer"; // Ændrer cursor til pointer ved hover
+    getBlueCar.style.cursor = "pointer";
     getBlueCar.addEventListener("click", () => {
       soundBlueCar.play();
     });
