@@ -38,8 +38,8 @@ document.addEventListener("DOMContentLoaded", () => {
       tooltip.innerHTML = html; // Indsætter teksten i tooltip'en
       tooltip.classList.add("is-visible"); // Gør tooltip'en synlig med css klassen
       setTimeout(function () {
-        tooltip.classList.remove("is-visible"); // Fjerner synligheds-klassen efter 3 sekunder
-      }, 3000);
+        tooltip.classList.remove("is-visible"); // Fjerner synligheds-klassen efter 8 sekunder
+      }, 8000);
     }
   }
 
