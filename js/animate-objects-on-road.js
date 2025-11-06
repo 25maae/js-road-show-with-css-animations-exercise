@@ -1,5 +1,6 @@
 "use strict";
 
+// Opretter vores data-struktur med et array som indeholder JS objekter
 const carInfo = [
   {
     className: "car1",
